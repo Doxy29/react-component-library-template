@@ -1,13 +1,8 @@
 ﻿import React from "react"
+import {ButtonProps} from "../../index.ts"
 
-type ButtonProps = {
-        label: string
-}
-
-const Button = (props: ButtonProps) =>{
+export const Button: React.FC<ButtonProps> = ({label, myVar="1"})=>{
     return(
-        <button>{props.label}</button>
+        <button>{label} {myVar}</button>
     )
 }
-
-export default Button;

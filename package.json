@@ -1,10 +1,12 @@
 {
-  "name": "react-component-library-template",
+  "name": "@Doxy29/react-component-library-template",
   "version": "0.0.1",
   "description": "minimal template for creating a react component library",
   "type": "module",
   "scripts": {
-    "rollup": "rollup --bundleConfigAsCjs -c "
+    "rollup": "rollup --bundleConfigAsCjs -c ",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "repository": {
     "type": "git",
@@ -20,10 +22,21 @@
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.5",
+    "@storybook/addon-essentials": "^7.6.0-alpha.4",
+    "@storybook/addon-interactions": "^7.6.0-alpha.4",
+    "@storybook/addon-links": "^7.6.0-alpha.4",
+    "@storybook/addon-mdx-gfm": "^7.6.0-alpha.4",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.6.0-alpha.4",
+    "@storybook/react": "^7.6.0-alpha.4",
+    "@storybook/react-vite": "^7.6.0-alpha.4",
+    "@storybook/testing-library": "^0.2.2",
     "@types/react": "^18.2.32",
     "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rollup": "^4.1.4",
     "rollup-plugin-dts": "^6.1.0",
+    "storybook": "^7.6.0-alpha.4",
     "tslib": "^2.6.2",
     "typescript": "^5.2.2"
   },
@@ -32,5 +45,11 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/Doxy29"
+  },
+  "dependencies": {
+    "rollup-plugin-postcss": "^4.0.2"
+  }
 }
