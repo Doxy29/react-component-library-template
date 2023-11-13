@@ -6,10 +6,13 @@ export default {
   component: Button,
   tags: ['autodocs'],
   argTypes: {
-    label: "Button",
+    label: {
+      control: "text",
+      description: 'Text displayed inside button',
+    },
     myVar: {
-      options: ['1', '2'],
       control: { type: 'radio' },
+      description: 'Number added to text',
     }
   },
 } ;
