@@ -50,6 +50,10 @@
     "registry": "https://npm.pkg.github.com/Doxy29"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.18",
+    "@mui/material": "^5.14.18",
     "rollup-plugin-postcss": "^4.0.2"
   }
 }

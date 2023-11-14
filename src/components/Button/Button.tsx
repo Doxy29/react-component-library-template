@@ -1,8 +1,24 @@
-﻿import React from "react"
+﻿import React, {memo, useMemo} from "react"
 import {ButtonProps} from "../../index.ts"
+import {Button as MuiButton} from "@mui/material";
+import { ThemeProvider } from "@mui/material/styles";
+import {defaultButtonProps} from "../../muiDefaults";
 
-export const Button: React.FC<ButtonProps> = ({label, myVar="1"})=>{
+
+const Button: React.FC<ButtonProps> = (
+    {
+        children,
+        ...props
+    }
+)=>{
+    
     return(
-        <button>{label} {myVar}</button>
+        <ThemeProvider theme={defaultButtonProps}>
+            <MuiButton  {...props} >
+                {children}
+            </MuiButton>
+        </ThemeProvider>
     )
 }
+
+export default memo(Button)

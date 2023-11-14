@@ -1,5 +1,5 @@
-﻿
-export type ButtonProps = {
-    label: string
-    myVar?: "1" | "2"
+﻿import {ButtonOwnProps as MuiButtonProps} from "@mui/material"
+
+export interface ButtonProps extends MuiButtonProps {
+    
 }

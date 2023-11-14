@@ -1,5 +1,5 @@
 ﻿
-import {Button} from "./components/Button/Button";
+import Button from "./components/Button/Button";
 import {ButtonProps} from "./types/index.";
 
 export {

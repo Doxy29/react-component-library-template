@@ -1,18 +1,25 @@
 import { StoryFn } from "@storybook/react";
-import {Button} from "../components/Button/Button";
+import Button from "../components/Button/Button";
+import {AbcOutlined} from '@mui/icons-material';
 
 export default {
   title: 'UI/Button',
   component: Button,
   tags: ['autodocs'],
   argTypes: {
-    label: {
+    children: {
       control: "text",
       description: 'Text displayed inside button',
     },
-    myVar: {
+    variant: {
+      options: ["contained", "outlined", "text"],
       control: { type: 'radio' },
-      description: 'Number added to text',
+      description: 'Button Variant',
+    },
+    size: {
+      options: ['small', 'medium', 'large'],
+      control: { type: 'radio' },
+      description: 'Button Size',
     }
   },
 } ;
@@ -21,14 +28,16 @@ const Template: StoryFn<typeof Button> = (args)=><Button {...args} /> ;
 
 export const Default = Template.bind({})
 Default.args = {
-  label: "Button",
-  myVar: "1"
+  variant:"contained",
+  children: "Button",
+  size:"medium"
 }
 
 export const SecondButton = Template.bind({})
 SecondButton.args = {
-  label: "My Sweet Button",
-  myVar: "2"
+  variant:"contained",
+  children: <AbcOutlined />,
+  size:"medium"
 }
 
 
